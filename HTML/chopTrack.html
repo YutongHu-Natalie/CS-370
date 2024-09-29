@@ -17,7 +17,10 @@ Page Description: ChopTrack
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Materialize Link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!--CSS Links-->
     <link rel="stylesheet" type="text/css" href="../CSS/chopTrack.css">
@@ -44,9 +47,45 @@ Page Description: ChopTrack
         </div>
     </nav>
 
-    <div>
-        Hello 
-        Create the page here
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#item_modal">Expiration</a>
+
+     <!--item modal-->
+     <div id="item_modal" class="modal">
+        <div class="modal-content">
+            <!--item form-->
+            <form class="col s12" id = "item_form">
+                <h2>Add Item</h2>
+                <div class="row">
+                    <!--food name-->
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">kitchen</i>
+                        <input id="food_name" type="text" class="validate" required>
+                        <label for="food_name">Food Name</label>
+                    </div>
+                   
+                    <!--expiration date-->
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">date_range</i>
+                        <input id="expir_date" type="date" class="validate" required>
+                        <label for="expir_date">Expiration Date</label>
+                    </div>
+                    <!--remind checkbox-->
+                    <div class="input-field col s5">
+                        <p>
+                            <label>
+                              <input type="checkbox" class="filled-in" id="notify"/>
+                              <span>Receive notifications</span>
+                            </label>
+                          </p>
+                    </div>  
+                </div>
+                <!--add item button-->
+                <a id="add_item_button" class="btn waves-effect waves-light">Add
+                    <i class="material-icons right">send</i>
+                </a>
+            </form>
+        </div>
     </div>
 
 
@@ -61,13 +100,21 @@ Page Description: ChopTrack
         </div>
     </footer>
 
+    
     <!-- Firebase SDK List here -->
-  
+    <!-- Firebase App (required) -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
 
     <!--JavaScript & JQuery at end of body for optimized loading-->
+    <script type="module" src="../JS/chopTrack.js"></script>
+    
+    <!-- Materialize JS Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
 
     
-    <!--Link to Javascript files-->
+
 
 </body>
 </html>
