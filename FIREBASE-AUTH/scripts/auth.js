@@ -5,8 +5,8 @@ signupform.addEventListener('submit', (e) =>{
     //prevent default action of submission
     e.preventDefault();
 
-    const email = signupform[`signup-email`].value;
-    const password = signupform[`signup-password`].value;
+    const email = signupform['signup-email'].value;
+    const password = signupform['signup-password'].value;
     
     //sign up the user given the details
     auth2.createUserWithEmailAndPassword(email, password).then(
@@ -28,4 +28,24 @@ logout.addEventListener('click', (e) => {
     auth.signOut().then(() => {
         console.log("user signed out");
     });
+});
+
+//login
+// login
+const loginForm = document.querySelector('#login-form');
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // get user info
+  const email = loginForm['login-email'].value;
+  const password = loginForm['login-password'].value;
+
+  // log the user in
+  auth.signInWithEmailAndPassword(email, password).then((cred) => {
+    console.log(cred.user);
+    // close the signup modal & reset form
+    const modal = document.querySelector('#modal-login');
+    M.Modal.getInstance(modal).close();
+    loginForm.reset();
+  });
+
 });
