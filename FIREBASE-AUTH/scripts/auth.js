@@ -3,9 +3,30 @@ auth.onAuthStateChanged(user => {
     console.log(user);
     if (user){
         console.log("user logged in: ", user);
+        let elements = document.querySelectorAll(".logged-out");
+        console.log(elements);
+        elements.forEach(element =>{
+            element.style = 'display:none;'
+        });
+        elements = document.querySelectorAll(".logged-in");
+        elements.forEach(element =>{
+            element.style = 'display:compact;';
+        });
+        
     }
     else{
         console.log("user logged out");
+        let elements = document.querySelectorAll(".logged-in");
+        console.log(elements);
+        elements.forEach(element =>{
+            element.style = 'display:none;';
+        });
+        elements = document.querySelectorAll(".logged-out");
+        elements.forEach(element =>{
+            element.style = 'display:compact;';
+        });
+        
+        
     }
 });
 
