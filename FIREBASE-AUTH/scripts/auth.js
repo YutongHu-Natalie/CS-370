@@ -1,4 +1,4 @@
-//making some things visible when logged in
+//tracking of user authentication status
 auth.onAuthStateChanged(user => {
     console.log(user);
     if (user){
@@ -8,9 +8,6 @@ auth.onAuthStateChanged(user => {
         console.log("user logged out");
     }
 });
-
-
-
 
 //sign-up
 const signupform = document.querySelector('#signup-form');
@@ -22,7 +19,7 @@ signupform.addEventListener('submit', (e) =>{
     const password = signupform['signup-password'].value;
     
     //sign up the user given the details
-    auth2.createUserWithEmailAndPassword(email, password).then(
+    auth.createUserWithEmailAndPassword(email, password).then(
         cred => {
             console.log(cred.user);
             const modal = document.querySelector('#modal-signup');
