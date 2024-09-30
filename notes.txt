@@ -1,0 +1,7 @@
+Firebase Auth
+- How it Works
+    - Client (browser) = website —> connects to the backend via firebase SDK → Firebase server
+    - Form captures user credentials which are sent to firebase
+    - Firebase sends back authentication token to browser allowing us to access data like name, user, etc. of the user that’s just logged in
+    - Requests made to firebase server after login, the token is sent along
+    - Refreshing does not mean that they’ll get logged out
