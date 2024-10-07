@@ -90,7 +90,7 @@ signupform.addEventListener('submit', (e) =>{
         } else if (e.code === 'auth/weak-password') {
             alert("Invalid password. Must be longer than 6 characters.");
         } else if (e.code === 'auth/invalid-password') {
-            alert("Invalid password.");
+            alert("Invalid password!");
         }else {
             alert(e.message);
         }    
