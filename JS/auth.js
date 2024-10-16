@@ -12,7 +12,7 @@ function openPopup() {
 }
 // Function to close the popup
 function closePopupFunc() {
-    popup.style="display: none";
+    popup.style.display = 'none';
 }
 // Event listeners
 // Close the popup when the close button is clicked
@@ -43,11 +43,8 @@ const db = getFirestore(app);
 
 //tracking of user authentication status
 auth.onAuthStateChanged(user => {
-    console.log(user);
     if (user){
-        console.log("user logged in: ", user);
         let elements = document.querySelectorAll(".logged-out");
-        console.log(elements);
         elements.forEach(element =>{
             element.style = 'display:none;'
         });
@@ -58,9 +55,7 @@ auth.onAuthStateChanged(user => {
         
     }
     else{
-        console.log("user logged out");
         let elements = document.querySelectorAll(".logged-in");
-        console.log(elements);
         elements.forEach(element =>{
             element.style = 'display:none;';
         });
@@ -90,10 +85,15 @@ function openSignupModal() {
 }
 function closeSignupModal() {
     signupModal.style.display = 'none';
-}
+}   
+
+
+
+
 signupButton.addEventListener('click', openSignupModal);
 closeSignupButton.addEventListener('click', closeSignupModal);
 navsignup.addEventListener('click', openSignupModal);
+
 
 //sign-up
 const signupform = document.querySelector('#signup-form');
@@ -125,7 +125,6 @@ signupform.addEventListener('submit', (e) =>{
             }
             try {
                 const docdoc = setDoc(docRef, data);
-                console.log("Document written with ID: ", docdoc.id);
                 signupform.reset();
                 closeSignupModal();
             } catch (e) {
