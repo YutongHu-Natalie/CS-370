@@ -3,420 +3,459 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ChopChop</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ChopChop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
 
  
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="css/flexslider.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+    <body>
+    
+    <nav id="fh5co-main-nav" role="navigation">
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
+        <div class="js-fullheight fh5co-table">
+            <div class="fh5co-table-cell js-fullheight">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chopTrack.html" class="logged-in">ChopTrack</a></li>
+                    <li><a href="chopGuide.html" class="logged-in">ChopGuide</a></li>
+                    <li><a href="chopHealth.html" class="logged-in">ChopHealth</a></li>
+                    <li><a href="#" class="logged-out" data-target="modal-signup" id="signup-button">Sign Up</a></li>
+                    <li><a href="login.html" class="logged-out">Login</a></li>
+                    <li><a href="account.html" class="logged-in">Account</a></li>
+                    <li><a class="logged-in" id="logout">Log-out</a></li>
+
+                </ul>
+                <!--p class="fh5co-social-icon">
+                    <a href="#"><i class="icon-twitter2"></i></a>
+                    <a href="#"><i class="icon-facebook2"></i></a>
+                    <a href="#"><i class="icon-instagram"></i></a>
+                    <a href="#"><i class="icon-dribbble2"></i></a>
+                    <a href="#"><i class="icon-youtube"></i></a>
+                </p-->
+            </div>
+        </div>
+    </nav>
+
+    <!--div id="fh5co-page">
+        <header>
+            <div class="container">
+                <div class="fh5co-navbar-brand">
+                    <img
+                        src = "placeholder.png" width = "100">
+                    <h1 class="text-center">
+                        <a class="fh5co-logo" href="index.html">ChopChop</a>
+                    </h1>
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                </div>
+            </div>
+        </header-->
+    
+        <!--logo-->
+        <header>
+            <div class="container">
+                <div class="fh5co-navbar-brand">
+                    <h1 class="text-center">
+                        <img src="images/placeholder.png" width="300" alt="ChopChop Logo">
+                        <a class="logged-out fh5co-logo" id="getstarted-signup">Get Started</a>
+                    </h1>
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+                </div>
+            </div>
+        </header>
+        
+
+        <!-- intro -->
+        <div id="fh5co-intro-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 animate-box text-center">
+                        <h2 class="intro-heading">Helping students 
+                            budget, organize, and maintain a healthy diet
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside id="fh5co-hero" class="js-fullheight">
+            <div class="flexslider js-fullheight">
+                <ul class="slides">
+                <li style="background-image: url(images/green.png);">
+                
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class  = "js-fullheight slider-text">
+                        <!--div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text"-->
+                            <div class="slider-text-inner">
+                                <h2>Mission/Value</h2>
+                                <span>ChopChop simplifies meal planning for college students by helping you organize groceries, 
+                                    plan meals, and track nutrition. With personalized recipes and automatic grocery lists, 
+                                    you can eat healthier, save money, and reduce food waste — all while managing a busy schedule.</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url(images/lightgreen2.png);">
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class="col-md-8 col-md-offset-2 col-md-push-3 js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <h2>Statistics</h2>
+                                <span>Majority prone to poor dietary hygiene (Yun et al.)
+                                    88% purchase groceries off-campus, yet only 43% have vehicles (Escamilla)
+                                    Monthly food spending: $673 on average (Hanson)
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--li style="background-image: url(images/slide_3.jpg);">
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <h2>Start Practicing Your Course</h2>
+                                <span>Products</span>
+                            </div>
+                        </div>
+                    </div>
+                </li-->
+                </ul>
+            </div>
+        </aside>
+
+        <div id="fh5co-services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center animate-box ">
+                        <div class="heading-section">
+                            <h2>Our Services</h2>
+                            <p>At ChopChop, we aim to help college students take control of their diet, budget, and time by simplifying 
+                                meal planning and grocery management. Our platform is designed to offer three core services that work 
+                                together to help you maintain a healthy lifestyle, save money, and reduce food waste</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <div class="icon">
+                                <span><i class="icon-mobile"></i></span>
+                            </div>
+                            <h3>ChopTrack</h3>
+                            <p>Track your nutrition and calories effortlessly with recipes tailored to your health goals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <div class="icon">
+                                <span><i class="icon-browser"></i></span>
+                            </div>
+                            <h3>ChopGuide</h3>
+                            <p>Discover recipes based on the ingredients you have, making meal planning easy and budget-friendly.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <div class="icon">
+                                <span><i class="icon-toolbox"></i></span>
+                            </div>
+                            <h3>ChopHealth</h3>
+                            <p>Keep track of your groceries with automated reminders for expiring ingredients and generate weekly shopping lists.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!-- signup modal -->
+		<div id="signup-modal" class="modal-content popup" style="z-index: 1; display: none;">
+			<br>
+			<h3 style="text-align: center;">Sign up</h4>
+			<span class="close" id="close-signup-button">&times;</span>
+			<form id="signup-form" style="padding: 20px; margin-left: 5px">
+				<div class="input-field">
+					<!-- <label for="signup-name">Name</label> -->
+					<input type="text" id="signup-name" placeholder="Name" required />
+				</div>
+				<div class="input-field">
+					<!-- <label for="signup-number">Phone Number</label> -->
+					<input type="tel" id="signup-number" placeholder="Phone Number" required />
+				</div>
+				<div class="input-field">
+					<!-- <label for="signup-email">Email address</label> -->
+					<input type="email" id="signup-email" placeholder="Email" required />
+				</div>
+				<div class="input-field">
+					<!-- <label for="signup-password">Type in password</label> -->
+					<input type="password" id="signup-password" placeholder="Password" required />
+				</div>
+				<br>
+				<button class="btn green darken-2 z-depth-0" style="margin:0 auto; display:block;">Sign up</button>
+			</form>
+			</div>
 	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-
-	<link rel="stylesheet" href="css/style.css">
-
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-	
-	<nav id="fh5co-main-nav" role="navigation">
-		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
-		<div class="js-fullheight fh5co-table">
-			<div class="fh5co-table-cell js-fullheight">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="chopTrack.html">ChopTrack</a></li>
-					<li><a href="chopGuide.html">ChopGuide</a></li>
-					<li><a href="chopHealth.html">ChopHealth</a></li>
-					<li><a href="account.html">Sign Up</a></li>
-					<li><a href="account.html">Login</a></li>
-					<li><a href="account.html">Account</a></li>
-				</ul>
-				<!--p class="fh5co-social-icon">
-					<a href="#"><i class="icon-twitter2"></i></a>
-					<a href="#"><i class="icon-facebook2"></i></a>
-					<a href="#"><i class="icon-instagram"></i></a>
-					<a href="#"><i class="icon-dribbble2"></i></a>
-					<a href="#"><i class="icon-youtube"></i></a>
-				</p-->
+			<div class="popup-overlay" id="popupOverlay" ></div>
+					<div class="popup" style="display: none; z-index: 2;" id="popup" >
+						<span class="close" id="closePopup">&times;</span>
+						<div class="popup-content" id="signupErrorContent">
+							<p>Error: (error type here)</p>
+						</div>
+					</div>
 			</div>
-		</div>
-	</nav>
 	
 
-	
-	<!--div id="fh5co-page">
-		<header>
-			<div class="container">
-				<div class="fh5co-navbar-brand">
-					<img
-						src = "placeholder.png" width = "100">
-					<h1 class="text-center">
-						<a class="fh5co-logo" href="index.html">ChopChop</a>
-					</h1>
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-				</div>
-			</div>
-		</header-->
-	
-		<!--logo-->
-		<header>
-			<div class="container">
-				<div class="fh5co-navbar-brand">
-					<h1 class="text-center">
-						<img src="images/placeholder.png" width="300" alt="ChopChop Logo">
-						<a class="fh5co-logo" href="signup.html">Get Started</a>
-					</h1>
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-				</div>
-			</div>
-		</header>
-		
 
-		<!-- intro -->
-		<div id="fh5co-intro-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 animate-box text-center">
-						<h2 class="intro-heading">Helping students 
-							budget, organize, and maintain a healthy diet
-						</h2>
-					</div>
-				</div>
-			</div>
-		</div>
+        <!--div id="fh5co-work-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center animate-box ">
+                        <div class="heading-section">
+                            <h2>Our Website</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-1.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-2.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-3.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-4.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-center view-button animate-box"><a href="#" class="btn btn-primary btn-outline btn-lg">See More Project</a></p>
+                </div>
+            </div>
+        </div>
 
-		<aside id="fh5co-hero" class="js-fullheight">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-			   	<li style="background-image: url(images/green.png);">
-				
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-						<div class  = "js-fullheight slider-text">
-			   			<!--div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text"-->
-			   				<div class="slider-text-inner">
-			   					<h2>Mission/Value</h2>
-			   					<span>ChopChop simplifies meal planning for college students by helping you organize groceries, 
-									plan meals, and track nutrition. With personalized recipes and automatic grocery lists, 
-									you can eat healthier, save money, and reduce food waste — all while managing a busy schedule.</span>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/lightgreen2.png);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-8 col-md-offset-2 col-md-push-3 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<h2>Statistics</h2>
-			   					<span>Majority prone to poor dietary hygiene (Yun et al.)
-									88% purchase groceries off-campus, yet only 43% have vehicles (Escamilla)
-									Monthly food spending: $673 on average (Hanson)
-									</span>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			   	<!--li style="background-image: url(images/slide_3.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<h2>Start Practicing Your Course</h2>
-			   					<span>Products</span>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li-->
-			  	</ul>
-		  	</div>
-		</aside>
+        <div id="fh5co-work-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center animate-box">
+                        <div class="heading-section">
+                            <h2>Branding</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-5.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-6.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-7.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center animate-box">
+                        <div class="work" style="background-image: url(images/img-8.jpg);">
+                            <a href="#" class="view">
+                                <span>View Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-center view-button animate-box"><a href="#" class="btn btn-primary btn-outline btn-lg">See More branding</a></p>
+                </div>
+            </div>
+        </div>
 
-		<div id="fh5co-services-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center animate-box ">
-						<div class="heading-section">
-							<h2>Our Services</h2>
-							<p>At ChopChop, we aim to help college students take control of their diet, budget, and time by simplifying 
-								meal planning and grocery management. Our platform is designed to offer three core services that work 
-								together to help you maintain a healthy lifestyle, save money, and reduce food waste</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<div class="icon">
-								<span><i class="icon-mobile"></i></span>
-							</div>
-							<h3>ChopTrack</h3>
-							<p>Track your nutrition and calories effortlessly with recipes tailored to your health goals.</p>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<div class="icon">
-								<span><i class="icon-browser"></i></span>
-							</div>
-							<h3>ChopGuide</h3>
-							<p>Discover recipes based on the ingredients you have, making meal planning easy and budget-friendly.</p>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<div class="icon">
-								<span><i class="icon-toolbox"></i></span>
-							</div>
-							<h3>ChopHealth</h3>
-							<p>Keep track of your groceries with automated reminders for expiring ingredients and generate weekly shopping lists.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--div id="fh5co-work-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center animate-box ">
-						<div class="heading-section">
-							<h2>Our Website</h2>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-1.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-6 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-2.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-6 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-3.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-6 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-4.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<p class="text-center view-button animate-box"><a href="#" class="btn btn-primary btn-outline btn-lg">See More Project</a></p>
-				</div>
-			</div>
-		</div>
+        <div id="fh5co-product-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 prod text-center animate-box">
+                        <div class="product" style="background-image: url(images/img-9.jpg);">
+                            <a href="#" class="view">
+                                <i class="icon-plus"></i>
+                            </a>
+                        </div>
+                        <h3><a href="#">Bag</a></h3>
+                        <span class="price">$48</span>
+                    </div>
+                    <div class="col-md-4 prod text-center animate-box">
+                        <div class="product" style="background-image: url(images/img-11.jpg);">
+                            <a href="#" class="view">
+                                <i class="icon-plus"></i>
+                            </a>
+                        </div>
+                        <h3><a href="#">Arigato Shoes</a></h3>
+                        <span class="price">$109</span>
+                    </div>
+                    <div class="col-md-4 prod text-center animate-box">
+                        <div class="product" style="background-image: url(images/img-12.jpg);">
+                            <a href="#" class="view">
+                                <i class="icon-plus"></i>
+                            </a>
+                        </div>
+                        <h3><a href="#">New Balance Shoes</a></h3>
+                        <span class="price">$89</span>
+                    </div>
+                    <p class="text-center view-button animate-box"><a href="#" class="btn btn-primary btn-outline btn-lg">See More Product</a></p>
+                </div>
+            </div>
+        </div>
 
-		<div id="fh5co-work-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center animate-box">
-						<div class="heading-section">
-							<h2>Branding</h2>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-5.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-8 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-6.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-7 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-7.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-md-5 text-center animate-box">
-						<div class="work" style="background-image: url(images/img-8.jpg);">
-							<a href="#" class="view">
-								<span>View Demo</span>
-							</a>
-						</div>
-					</div>
-					<p class="text-center view-button animate-box"><a href="#" class="btn btn-primary btn-outline btn-lg">See More branding</a></p>
-				</div>
-			</div>
-		</div>
+        <div class="fh5co-counters" style="background-image: url(images/hero.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
+            <div class="fh5co-narrow-content animate-box">
+                <div class="row" >
+                    <div class="col-md-4 text-center">
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="130" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">Website</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="1450" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">Branding</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="7497" data-speed="5000" data-refresh-interval="50"></span>
+                        <span class="fh5co-counter-label">Product</span>
+                    </div>
+                </div>
+            </div>
+        </div-->
+        <footer>
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="section-title">ChopChop</h3>
+                            <p>Helping students budget, organize, and maintain a healthy diet</p>
+                        </div>
+                        
+                        <!--div class="col-md-4 col-md-push-1">
+                            <h3 class="section-title">Our Services</h3>
+                            <ul>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">Photography</a></li>
+                                <li><a href="#">Editing Photos</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">API</a></li>
+                                <li><a href="#">FAQ / Contact</a></li>
+                            </ul>
+                        </div-->
 
-		<div id="fh5co-product-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 prod text-center animate-box">
-						<div class="product" style="background-image: url(images/img-9.jpg);">
-							<a href="#" class="view">
-								<i class="icon-plus"></i>
-							</a>
-						</div>
-						<h3><a href="#">Bag</a></h3>
-						<span class="price">$48</span>
-					</div>
-					<div class="col-md-4 prod text-center animate-box">
-						<div class="product" style="background-image: url(images/img-11.jpg);">
-							<a href="#" class="view">
-								<i class="icon-plus"></i>
-							</a>
-						</div>
-						<h3><a href="#">Arigato Shoes</a></h3>
-						<span class="price">$109</span>
-					</div>
-					<div class="col-md-4 prod text-center animate-box">
-						<div class="product" style="background-image: url(images/img-12.jpg);">
-							<a href="#" class="view">
-								<i class="icon-plus"></i>
-							</a>
-						</div>
-						<h3><a href="#">New Balance Shoes</a></h3>
-						<span class="price">$89</span>
-					</div>
-					<p class="text-center view-button animate-box"><a href="#" class="btn btn-primary btn-outline btn-lg">See More Product</a></p>
-				</div>
-			</div>
-		</div>
+                        <!--div class="col-md-4">
+                            <h3 class="section-title">Information</h3>
+                            <ul>
+                                <li><a href="#">Terms &amp; Condition</a></li>
+                                <li><a href="#">License</a></li>
+                                <li><a href="#">Privacy &amp; Policy</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div-->
+                        
+                
 
-		<div class="fh5co-counters" style="background-image: url(images/hero.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-			<div class="fh5co-narrow-content animate-box">
-				<div class="row" >
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="130" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Website</span>
-					</div>
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="1450" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Branding</span>
-					</div>
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="7497" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Product</span>
-					</div>
-				</div>
-			</div>
-		</div-->
-		<footer>
-			<div id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<h3 class="section-title">ChopChop</h3>
-							<p>Helping students budget, organize, and maintain a healthy diet</p>
-						</div>
-						
-						<!--div class="col-md-4 col-md-push-1">
-							<h3 class="section-title">Our Services</h3>
-							<ul>
-								<li><a href="#">Videos</a></li>
-								<li><a href="#">Photography</a></li>
-								<li><a href="#">Editing Photos</a></li>
-								<li><a href="#">Newsletter</a></li>
-								<li><a href="#">API</a></li>
-								<li><a href="#">FAQ / Contact</a></li>
-							</ul>
-						</div-->
+                    <div class="row copy-right">
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <p class="fh5co-social-icon">
+                                <a href="#"><i class="icon-twitter2"></i></a>
+                                <a href="#"><i class="icon-facebook2"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+                                <a href="#"><i class="icon-dribbble2"></i></a>
+                                <a href="#"><i class="icon-youtube"></i></a>
+                            </p>
+                            <p> © 2024 Chop Chop </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div>
 
-						<!--div class="col-md-4">
-							<h3 class="section-title">Information</h3>
-							<ul>
-								<li><a href="#">Terms &amp; Condition</a></li>
-								<li><a href="#">License</a></li>
-								<li><a href="#">Privacy &amp; Policy</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
-						</div-->
-						
-				
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Counters -->
+    <script src="js/jquery.countTo.js"></script>
+    <!-- Flexslider -->
+    <script src="js/jquery.flexslider-min.js"></script>
 
-					<div class="row copy-right">
-						<div class="col-md-6 col-md-offset-3 text-center">
-							<p class="fh5co-social-icon">
-								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="#"><i class="icon-facebook2"></i></a>
-								<a href="#"><i class="icon-instagram"></i></a>
-								<a href="#"><i class="icon-dribbble2"></i></a>
-								<a href="#"><i class="icon-youtube"></i></a>
-							</p>
-							<p> © 2024 Chop Chop </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	
-	</div>
+    <!-- Main JS -->
+    <script src="js/main.js" type="module"></script>
+	<script src="js/signup.js" type="module"></script>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-
-	<!-- Main JS -->
-	<script src="js/main.js"></script>
-
-	</body>
+    </body>
 </html>
-

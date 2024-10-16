@@ -2,6 +2,28 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/fireba
 import { getFirestore, doc, getDoc, setDoc, collection } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js"
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from   "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js"; 
 
+
+const signupButton = document.getElementById("signup-button");
+const closeSignupButton = document.getElementById("close-signup-button");
+const signupModal = document.getElementById("signup-modal");
+const navsignup = document.getElementById("getstarted-signup");
+
+
+console.log(signupModal)
+
+
+function openSignupModal() {
+    signupModal.style.display = 'block';
+}
+function closeSignupModal() {
+    signupModal.style.display = 'none';
+}
+
+signupButton.addEventListener('click', openSignupModal);
+closeSignupButton.addEventListener('click', closeSignupModal);
+navsignup.addEventListener('click', openSignupModal);
+
+
 //error pop-ups
 const popupOverlay = document.getElementById('popupOverlay');
 const popup = document.getElementById('popup');
@@ -42,6 +64,36 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+//tracking of user authentication status
+auth.onAuthStateChanged(user => {
+    console.log(user);
+    if (user){
+        console.log("user logged in: ", user);
+        let elements = document.querySelectorAll(".logged-out");
+        console.log(elements);
+        elements.forEach(element =>{
+            element.style = 'display:none;'
+        });
+        elements = document.querySelectorAll(".logged-in");
+        elements.forEach(element =>{
+            element.style = 'display:compact;';
+        });
+        
+    }
+    else{
+        console.log("user logged out");
+        let elements = document.querySelectorAll(".logged-in");
+        console.log(elements);
+        elements.forEach(element =>{
+            element.style = 'display:none;';
+        });
+        elements = document.querySelectorAll(".logged-out");
+        elements.forEach(element =>{
+            element.style = 'display:compact;';
+        });
+    }
+});
+
 //sign-up
 const signupform = document.querySelector('#signup-form');
 
@@ -53,7 +105,8 @@ signupform.addEventListener('submit', (e) =>{
     const password = signupform['signup-password'].value;
     const name = signupform['signup-name'].value;
     const number = signupform['signup-number'].value;
-        //sign up the user given the details
+
+    //sign up the user given the details
     createUserWithEmailAndPassword(auth, email, password).then(
         cred => {
             // console.log(cred.user);
@@ -72,6 +125,8 @@ signupform.addEventListener('submit', (e) =>{
             try {
                 const docdoc = setDoc(docRef, data);
                 console.log("Document written with ID: ", docdoc.id);
+                signupform.reset();
+                closeSignupModal();
             } catch (e) {
                 console.error("Error adding document: ", e);
             }
@@ -91,12 +146,12 @@ signupform.addEventListener('submit', (e) =>{
             const element = document.getElementById("signupErrorContent");
             element.textContent = "Invalid password! Must be longer than 6 characters."; 
             openPopup();
-            alert("Invalid password. Must be longer than 6 characters.");
+            //alert("Invalid password. Must be longer than 6 characters.");
         } else if (e.code === 'auth/invalid-password') {
             const element = document.getElementById("signupErrorContent");
             element.textContent = "Invalid password!"; 
             openPopup();
-            alert("Invalid password!");
+            //alert("Invalid password!");
         }else {
             const element = document.getElementById("signupErrorContent");
             element.textContent = e.message; 
@@ -106,3 +161,9 @@ signupform.addEventListener('submit', (e) =>{
     });
 } ); //when the form submits, we want to add their user if it doesn't exist
 
+//logout
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e) => {
+    e.preventDefault();
+    auth.signOut();
+});
