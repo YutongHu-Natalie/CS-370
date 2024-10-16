@@ -76,8 +76,17 @@ const signupButton = document.getElementById("signup-button");
 const closeSignupButton = document.getElementById("close-signup-button");
 const signupModal = document.getElementById("signup-modal");
 const navsignup = document.getElementById("getstarted-signup");
+
+function closeNavBar(){
+    if( $('body').hasClass('menu-show') ) {
+        $('body').removeClass('menu-show');
+        $('#fh5co-main-nav > .js-fh5co-nav-toggle').removeClass('show');
+    }
+}
+
 function openSignupModal() {
     signupModal.style.display = 'block';
+    closeNavBar();
 }
 function closeSignupModal() {
     signupModal.style.display = 'none';
@@ -157,8 +166,11 @@ signupform.addEventListener('submit', (e) =>{
 const loginButton = document.getElementById("login-button");
 const closeLoginButton = document.getElementById("close-login-button");
 const loginModal = document.getElementById("login-modal");
+
 function openLoginModal() {
     loginModal.style.display = 'block';
+    closeNavBar();
+
 }
 function closeLoginModal() {
     loginModal.style.display = 'none';
